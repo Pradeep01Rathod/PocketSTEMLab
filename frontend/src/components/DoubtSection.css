@@ -1,0 +1,730 @@
+/* ==========================================================================
+   EDUSPARK AI DOUBT ASSISTANT STYLING (CRAFTO THEME)
+   Colors: #313E3B (Dark Emerald Slate), #D5D52B (Bright Lime), #FFFFFF (Cards)
+   ========================================================================== */
+
+.eduspark-doubt-container {
+  width: 100%;
+  margin: 32px 0;
+  padding: 28px;
+  background: #ffffff;
+  border: 1px solid #e1e7e4;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(49, 62, 59, 0.05);
+  box-sizing: border-box;
+  font-family: inherit;
+  color: #313e3b;
+}
+
+/* 1. HERO BANNER */
+.doubt-hero-banner {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #edf1ef;
+  margin-bottom: 22px;
+}
+
+.doubt-hero-avatar {
+  position: relative;
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  background: #313e3b;
+  color: #d5d52b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(49, 62, 59, 0.15);
+}
+
+.doubt-ai-live-dot {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  width: 12px;
+  height: 12px;
+  background: #10b981;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  animation: pulse-dot 2s infinite ease-in-out;
+}
+
+@keyframes pulse-dot {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+.doubt-hero-meta {
+  flex: 1;
+  min-width: 0;
+}
+
+.doubt-hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: #313e3b;
+  background: #ebf0ed;
+  padding: 3px 8px;
+  border-radius: 20px;
+  margin-bottom: 6px;
+}
+
+.doubt-hero-meta h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #313e3b;
+  margin: 0 0 4px;
+  letter-spacing: -0.01em;
+}
+
+.doubt-hero-meta p {
+  font-size: 13.5px;
+  color: #63716e;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* 2. CONFIG CARD & SELECTORS */
+.doubt-config-card {
+  background: #f8faf9;
+  border: 1px solid #e5ebe8;
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 22px;
+}
+
+.doubt-config-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #556461;
+  margin-bottom: 12px;
+}
+
+.doubt-subject-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.doubt-sub-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 14px;
+  border-radius: 24px;
+  font-size: 12.5px;
+  font-weight: 700;
+  border: 1px solid #e3e9e6;
+  background: #ffffff;
+  color: #313e3b;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.doubt-sub-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.doubt-sub-btn.active {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+.doubt-selectors-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.doubt-selectors-grid label {
+  display: block;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #556461;
+  margin-bottom: 4px;
+}
+
+.doubt-selectors-grid select {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-family: inherit;
+  color: #313e3b;
+  background: #ffffff;
+  border: 1px solid #d4ded9;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.doubt-selectors-grid select:focus {
+  border-color: #313e3b;
+  box-shadow: 0 0 0 2px rgba(49, 62, 59, 0.08);
+}
+
+/* 3. INPUT FORM */
+.doubt-input-form {
+  margin-bottom: 24px;
+}
+
+.doubt-textarea-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.doubt-textarea-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #313e3b;
+  margin-bottom: 8px;
+}
+
+.doubt-textarea-wrap textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px 16px;
+  font-size: 14px;
+  font-family: inherit;
+  line-height: 1.55;
+  color: #313e3b;
+  background: #ffffff;
+  border: 1.5px solid #d4ded9;
+  border-radius: 12px;
+  resize: vertical;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.doubt-textarea-wrap textarea:focus {
+  border-color: #313e3b;
+  box-shadow: 0 0 0 3px rgba(49, 62, 59, 0.08);
+}
+
+/* Quick prompt chips */
+.doubt-chips-bar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.doubt-chips-label {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #71807d;
+}
+
+.doubt-chip-btn {
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 16px;
+  background: #f1f5f3;
+  color: #3c4a47;
+  border: 1px solid #dfe5e2;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.doubt-chip-btn:hover {
+  background: #e3ebe7;
+  color: #212c29;
+}
+
+.doubt-form-bottom-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.doubt-char-counter {
+  font-size: 12px;
+  color: #8c9895;
+}
+
+.doubt-ask-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 22px;
+  background: #313e3b;
+  color: #ffffff;
+  font-size: 13.5px;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.doubt-ask-btn:hover:not(:disabled) {
+  background: #1e2826;
+  box-shadow: 0 4px 12px rgba(49, 62, 59, 0.18);
+  transform: translateY(-1px);
+}
+
+.doubt-ask-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.doubt-spin-icon {
+  animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ERROR NOTICE BANNER */
+.doubt-error-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 16px;
+  background: #fef2f2;
+  border: 1px solid #fee2e2;
+  border-radius: 10px;
+  color: #991b1b;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.doubt-error-banner strong {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.doubt-error-banner p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.doubt-retry-link {
+  background: #b91c1c;
+  color: #ffffff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* SKELETON / THINKING STATE */
+.doubt-thinking-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 18px;
+  background: #f7faf9;
+  border: 1px solid #e1e9e5;
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.doubt-thinking-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #313e3b;
+  color: #d5d52b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.doubt-thinking-content {
+  flex: 1;
+}
+
+.doubt-thinking-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  font-size: 13px;
+  color: #313e3b;
+}
+
+.doubt-thinking-pulse {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #10b981;
+  animation: pulse-dot 1.2s infinite;
+}
+
+.doubt-skeleton-line {
+  height: 10px;
+  background: linear-gradient(90deg, #e3ece8 25%, #f2f7f5 50%, #e3ece8 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* 4. CONVERSATION HISTORY */
+.doubt-history-section {
+  border-top: 1px solid #edf1ef;
+  padding-top: 24px;
+}
+
+.doubt-history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.doubt-history-header h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #313e3b;
+  margin: 0 0 4px;
+}
+
+.doubt-history-header p {
+  font-size: 13px;
+  color: #71807d;
+  margin: 0;
+}
+
+.doubt-filter-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.doubt-tab-btn {
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 16px;
+  background: #f1f5f3;
+  color: #556461;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.doubt-tab-btn:hover {
+  background: #e3eae6;
+  color: #313e3b;
+}
+
+.doubt-tab-btn.active {
+  background: #313e3b;
+  color: #ffffff;
+}
+
+/* EMPTY STATE */
+.doubt-empty-card {
+  text-align: center;
+  padding: 48px 24px;
+  background: #fcfdfd;
+  border: 1.5px dashed #d8e2de;
+  border-radius: 12px;
+  color: #63716e;
+}
+
+.doubt-empty-card h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #313e3b;
+  margin: 12px 0 4px;
+}
+
+.doubt-empty-card p {
+  font-size: 13px;
+  max-width: 440px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* MESSAGE THREAD CARDS */
+.doubt-thread-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.doubt-thread-card {
+  background: #ffffff;
+  border: 1px solid #e1e9e5;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 2px 12px rgba(49, 62, 59, 0.04);
+}
+
+.doubt-thread-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f0f4f2;
+}
+
+.doubt-thread-badges {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.doubt-subject-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 800;
+  color: #ffffff;
+  padding: 3px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.doubt-topic-badge {
+  font-size: 11.5px;
+  font-weight: 600;
+  background: #eef3f0;
+  color: #313e3b;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.doubt-category-badge {
+  font-size: 11px;
+  font-weight: 600;
+  background: #eef2f6;
+  color: #2b4365;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.doubt-timestamp {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11.5px;
+  color: #8c9895;
+}
+
+/* BUBBLES */
+.doubt-bubble {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.doubt-bubble:last-child {
+  margin-bottom: 0;
+}
+
+.doubt-bubble-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.student-avatar {
+  background: #e3ece8;
+  color: #313e3b;
+}
+
+.ai-avatar {
+  background: #313e3b;
+  color: #d5d52b;
+}
+
+.doubt-bubble-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.doubt-bubble-sender {
+  display: block;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #556461;
+  margin-bottom: 4px;
+}
+
+.ai-sender-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #1e2826;
+}
+
+.doubt-bubble-text {
+  font-size: 14.5px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #1e2826;
+  margin: 0;
+  background: #f7faf9;
+  border: 1px solid #e7efe9;
+  padding: 10px 14px;
+  border-radius: 8px;
+}
+
+.doubt-bubble-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.doubt-bubble-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.doubt-action-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #556461;
+  background: transparent;
+  border: 1px solid #d8e2de;
+  border-radius: 6px;
+  padding: 3px 8px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.doubt-action-icon-btn:hover {
+  background: #f1f5f3;
+  color: #1e2826;
+}
+
+.doubt-answer-prose {
+  background: #fbfdfc;
+  border: 1px solid #dce8e1;
+  border-left: 3.5px solid #313e3b;
+  border-radius: 8px;
+  padding: 14px 16px;
+  font-size: 14px;
+  line-height: 1.65;
+  color: #2c3835;
+}
+
+.doubt-answer-prose p {
+  margin: 0 0 10px;
+  white-space: pre-wrap;
+}
+
+.doubt-answer-prose p:last-child {
+  margin-bottom: 0;
+}
+
+/* 5. FOOTER DISCLAIMER */
+.doubt-footer-disclaimer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 24px;
+  padding: 12px 16px;
+  background: #f8faf9;
+  border-radius: 8px;
+  border: 1px solid #e5ebe8;
+  color: #71807d;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.doubt-footer-disclaimer span {
+  font-size: 16px;
+}
+
+.doubt-footer-disclaimer p {
+  margin: 0;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 900px) {
+  .doubt-selectors-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .eduspark-doubt-container {
+    padding: 16px;
+    margin: 20px 0;
+  }
+
+  .doubt-hero-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .doubt-selectors-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .doubt-form-bottom-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .doubt-ask-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .doubt-thread-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .doubt-bubble-top-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+}

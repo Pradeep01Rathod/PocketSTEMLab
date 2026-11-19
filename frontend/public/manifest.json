@@ -1,0 +1,18 @@
+{
+  "short_name": "EduSpark",
+  "name": "EduSpark - Interactive STEM Education Platform",
+  "description": "Interactive 3D laboratories, simulations and STEM learning for Classes 6-10",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192 512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#FFFFFF",
+  "theme_color": "#313E3B",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "categories": ["education", "science", "kids"]
+}

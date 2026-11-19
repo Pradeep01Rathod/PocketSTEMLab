@@ -1,0 +1,116 @@
+/* =============================================================================
+   EDUSPARK LANGUAGE SWITCHER COMPONENT STYLES
+   Designed with Crafto visual aesthetic (#313E3B, #D5D52B, #FFFFFF)
+   ============================================================================= */
+
+.eduspark-lang-switcher-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.eduspark-lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.eduspark-lang-toggle:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: #D5D52B;
+}
+
+.eduspark-lang-toggle:focus-visible {
+  outline: 2px solid #D5D52B;
+  outline-offset: 2px;
+}
+
+.lang-globe-icon {
+  color: #D5D52B;
+  flex-shrink: 0;
+}
+
+.lang-label {
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.lang-arrow {
+  font-size: 9px;
+  opacity: 0.7;
+  margin-left: 2px;
+}
+
+/* Dropdown Menu */
+.eduspark-lang-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: #1E2624;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  list-style: none;
+  padding: 6px;
+  margin: 0;
+  min-width: 175px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.lang-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-radius: 6px;
+  color: #E2E8E6;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  outline: none;
+}
+
+.lang-option:hover,
+.lang-option:focus-visible {
+  background: rgba(213, 213, 43, 0.15);
+  color: #FFFFFF;
+}
+
+.lang-option.selected {
+  background: rgba(213, 213, 43, 0.22);
+  color: #D5D52B;
+  font-weight: 600;
+}
+
+.lang-native-name {
+  font-weight: 500;
+}
+
+.lang-english-name {
+  font-size: 11px;
+  opacity: 0.65;
+  margin-left: auto;
+  margin-right: 8px;
+}
+
+.lang-check-icon {
+  color: #D5D52B;
+}
+
+/* Compact Variant */
+.eduspark-lang-switcher-wrap.compact .eduspark-lang-toggle {
+  padding: 4px 10px;
+  font-size: 12px;
+}

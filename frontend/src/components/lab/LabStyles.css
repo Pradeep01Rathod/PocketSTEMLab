@@ -1,0 +1,733 @@
+/* ==========================================================================
+   REUSABLE STEM LAB STYLES & MODALS (CRAFTO THEME)
+   ========================================================================== */
+
+/* Top Navigation Bar */
+.stem-lab-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #313E3B;
+  color: #FFFFFF;
+  border-bottom: 2px solid #D5D52B;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+}
+
+.stem-lab-header-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.stem-lab-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.stem-lab-brand-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background-color: #232D2B;
+  border: 1.5px solid #D5D52B;
+  color: #D5D52B;
+  display: grid;
+  place-items: center;
+}
+
+.stem-lab-brand-name {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.stem-lab-brand-name strong {
+  color: #D5D52B;
+}
+
+.stem-lab-divider {
+  color: rgba(255, 255, 255, 0.25);
+  font-weight: 300;
+}
+
+.stem-lab-back-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.stem-lab-back-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: #FFFFFF;
+}
+
+.stem-lab-title-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #232D2B;
+  padding: 5px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 13px;
+}
+
+.stem-lab-subject-icon {
+  color: #D5D52B;
+}
+
+.stem-lab-subject-tag {
+  color: #D5D52B;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+.stem-lab-exp-name {
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.stem-lab-class-tag {
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.stem-lab-header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.stem-lab-action-btn {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #FFFFFF;
+  padding: 7px 14px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.stem-lab-action-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.stem-lab-action-btn.dashboard-btn {
+  background-color: #D5D52B;
+  color: #313E3B;
+  border-color: #D5D52B;
+  font-weight: 700;
+}
+
+.stem-lab-action-btn.dashboard-btn:hover {
+  background-color: #FFFFFF;
+  color: #313E3B;
+}
+
+/* ================= MODAL OVERLAYS & CARDS ================= */
+
+.stem-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(5px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  overflow-y: auto;
+}
+
+.stem-modal-card {
+  background-color: #FFFFFF;
+  border-radius: 14px;
+  max-width: 680px;
+  width: 100%;
+  max-height: 88vh;
+  overflow-y: auto;
+  padding: 36px 40px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+  position: relative;
+  color: #313E3B;
+}
+
+.stem-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background-color: #F0F2F1;
+  color: #313E3B;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: background-color 0.2s ease;
+}
+
+.stem-modal-close:hover {
+  background-color: #E2E8E5;
+}
+
+/* ================= INTRO MODAL ================= */
+
+.stem-intro-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.stem-badge-primary {
+  background-color: #313E3B;
+  color: #D5D52B;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  letter-spacing: 0.05em;
+}
+
+.stem-badge-secondary {
+  background-color: #F0F2F1;
+  color: #556260;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.stem-intro-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: #313E3B;
+  margin: 0 0 24px;
+  line-height: 1.3;
+}
+
+.stem-intro-section {
+  background-color: #F8FAF9;
+  border-radius: 10px;
+  padding: 18px 22px;
+  margin-bottom: 18px;
+  border: 1px solid #E8ECE9;
+}
+
+.stem-intro-section.safety-box {
+  background-color: #FFF5F5;
+  border-color: #FED7D7;
+}
+
+.stem-intro-section-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.stem-intro-section-title h4 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: #313E3B;
+}
+
+.stem-intro-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.stem-intro-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13.5px;
+  color: #4A5653;
+  line-height: 1.5;
+}
+
+.stem-materials-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.stem-material-chip {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8E5;
+  border-radius: 6px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: #313E3B;
+}
+
+.stem-mat-num {
+  font-size: 10px;
+  font-weight: 800;
+  color: #D5D52B;
+  background-color: #313E3B;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+.safety-bullet {
+  font-size: 14px;
+}
+
+.stem-intro-footer {
+  margin-top: 24px;
+}
+
+.stem-start-lab-btn {
+  width: 100%;
+  padding: 14px 20px;
+  background-color: #313E3B;
+  color: #D5D52B;
+  font-size: 15px;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(49, 62, 59, 0.25);
+}
+
+.stem-start-lab-btn:hover {
+  background-color: #D5D52B;
+  color: #313E3B;
+  transform: translateY(-2px);
+}
+
+/* ================= COMPLETION MODAL ================= */
+
+.stem-comp-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.stem-comp-trophy {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background-color: #FEF9C3;
+  color: #CA8A04;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 16px;
+}
+
+.stem-comp-kicker {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: #16A34A;
+  background-color: #DCFCE7;
+  padding: 4px 12px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.stem-comp-header h2 {
+  font-size: 24px;
+  font-weight: 800;
+  margin: 0 0 6px;
+  color: #313E3B;
+}
+
+.stem-comp-subtitle {
+  font-size: 14px;
+  color: #71807D;
+  margin: 0;
+}
+
+.stem-save-indicator {
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.stem-save-indicator.saved {
+  background-color: #DCFCE7;
+  color: #15803D;
+  border: 1px solid #BBF7D0;
+}
+
+.stem-save-indicator.saving {
+  background-color: #FEF9C3;
+  color: #854D0E;
+}
+
+.stem-save-indicator.error {
+  background-color: #FEE2E2;
+  color: #B91C1C;
+}
+
+.stem-comp-box {
+  background-color: #F8FAF9;
+  border: 1px solid #E8ECE9;
+  border-radius: 8px;
+  padding: 18px 22px;
+  margin-bottom: 16px;
+}
+
+.stem-comp-box p {
+  margin: 0;
+  font-size: 13.5px;
+  color: #4A5653;
+  line-height: 1.6;
+}
+
+.stem-comp-box.result-highlight {
+  background-color: #FEFCE8;
+  border-left: 4px solid #CA8A04;
+}
+
+.stem-comp-box-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.stem-comp-box-title h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #313E3B;
+}
+
+.stem-comp-obs-list {
+  margin: 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  color: #4A5653;
+  line-height: 1.5;
+}
+
+.stem-comp-actions {
+  margin-top: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stem-action-btn-quiz {
+  padding: 14px 20px;
+  background-color: #313E3B;
+  color: #D5D52B;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(49, 62, 59, 0.25);
+}
+
+.stem-action-btn-quiz:hover {
+  background-color: #D5D52B;
+  color: #313E3B;
+  transform: translateY(-2px);
+}
+
+.stem-comp-secondary-btns {
+  display: flex;
+  gap: 10px;
+}
+
+.stem-btn-secondary {
+  flex: 1;
+  padding: 11px;
+  border-radius: 6px;
+  border: 1px solid #D9E0DD;
+  background-color: #FFFFFF;
+  color: #313E3B;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.stem-btn-secondary:hover {
+  border-color: #313E3B;
+  background-color: #F8FAF9;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .stem-lab-header {
+    padding: 10px 14px;
+  }
+  .stem-lab-exp-name {
+    display: none;
+  }
+  .stem-materials-grid {
+    grid-template-columns: 1fr;
+  }
+  .stem-modal-card {
+    padding: 24px 20px;
+  }
+}
+
+/* ==========================================================================
+   ACTIVITY SELECTOR TABS & GENERAL SIMULATION WIDGETS
+   ========================================================================== */
+
+.activity-selector-container {
+  position: sticky;
+  top: 0;
+  z-index: 95;
+  background-color: #313E3B;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+.activity-tabs-strip {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 24px;
+  background-color: #232D2B;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.activity-tabs-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #D5D52B;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.activity-tabs-list {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+}
+
+.activity-tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #E2E8F0;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.activity-tab-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(213, 213, 43, 0.5);
+  color: #FFFFFF;
+}
+
+.activity-tab-btn.active {
+  background: #6655D9;
+  border-color: #8B7CE8;
+  color: #FFFFFF;
+  box-shadow: 0 2px 8px rgba(102, 85, 217, 0.4);
+}
+
+.activity-tab-btn.completed {
+  border-color: rgba(34, 197, 94, 0.5);
+}
+
+.tab-grade {
+  font-size: 10px;
+  padding: 2px 6px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  font-weight: 500;
+  opacity: 0.85;
+}
+
+.tab-done-icon {
+  margin-right: -2px;
+}
+
+/* Common Interactive Lab Layout */
+.stem-lab-container {
+  min-height: 100vh;
+  background-color: #F4F7F5;
+  display: flex;
+  flex-direction: column;
+}
+
+.stem-lab-main {
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.stem-lab-grid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 24px;
+  align-items: start;
+}
+
+@media (max-width: 960px) {
+  .stem-lab-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.stem-viewport-card {
+  background-color: #0F1A15;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  color: #FFFFFF;
+  position: relative;
+  border: 2px solid #313E3B;
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+}
+
+.stem-controls-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.stem-card-white {
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #D9E0DD;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+.stem-card-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #313E3B;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stem-metric-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.stem-metric-item {
+  background-color: #F8FAF9;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.stem-metric-label {
+  font-size: 11px;
+  color: #64748B;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.stem-metric-val {
+  font-size: 17px;
+  font-weight: 700;
+  color: #313E3B;
+  margin-top: 4px;
+}
+
+.stem-slider-group {
+  margin-bottom: 14px;
+}
+
+.stem-slider-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: 600;
+  color: #313E3B;
+  margin-bottom: 6px;
+}
+
+.stem-slider-input {
+  width: 100%;
+  accent-color: #6655D9;
+  cursor: pointer;
+}
+

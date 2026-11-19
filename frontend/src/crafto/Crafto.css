@@ -1,0 +1,1559 @@
+/* ==========================================================================
+   EDUSPARK CRAFTO THEME STYLESHEET
+   Visual Design System Tokens (Crafto eLearning Foundation):
+   - Primary Accent: #D5D52B (Vibrant Lime Accent)
+   - Secondary / Charcoal: #313E3B (Deep Forest Slate)
+   - Dark Contrast: #1E2624
+   - Slate Body Text: #6B7B77
+   - Background Light: #F8FAF9
+   - Card Background: #FFFFFF
+   - Border Color: #E6EAE8
+   - Primary Font: 'Inter', sans-serif
+   - Heading Font: 'Space Grotesk', sans-serif
+   ========================================================================== */
+
+:root {
+  --crafto-primary: #D5D52B;
+  --crafto-primary-hover: #c2c222;
+  --crafto-secondary: #313E3B;
+  --crafto-secondary-dark: #1E2624;
+  --crafto-dark: #151B1A;
+  --crafto-text: #6B7B77;
+  --crafto-text-dark: #2A3633;
+  --crafto-light-bg: #F8FAF9;
+  --crafto-card-bg: #FFFFFF;
+  --crafto-border: #E6EAE8;
+  --crafto-font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --crafto-font-heading: 'Space Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --crafto-container-max: 1240px;
+  --crafto-radius: 8px;
+  --crafto-transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* ================= BASE / RESET ================= */
+.crafto-root {
+  font-family: var(--crafto-font-body);
+  color: var(--crafto-text);
+  background-color: #FFFFFF;
+  line-height: 1.7;
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 100vw;
+}
+
+.crafto-root * {
+  box-sizing: border-box;
+}
+
+.crafto-root h1,
+.crafto-root h2,
+.crafto-root h3,
+.crafto-root h4,
+.crafto-root h5,
+.crafto-root h6 {
+  font-family: var(--crafto-font-heading);
+  color: var(--crafto-secondary);
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.crafto-root p {
+  margin: 0 0 1rem 0;
+  color: var(--crafto-text);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.crafto-root a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--crafto-transition);
+}
+
+.crafto-root button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: transparent;
+  transition: var(--crafto-transition);
+}
+
+.crafto-container {
+  max-width: var(--crafto-container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Badges / Eyebrows */
+.crafto-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  background-color: rgba(213, 213, 43, 0.15);
+  color: #313E3B;
+  border: 1px solid rgba(213, 213, 43, 0.35);
+}
+
+.crafto-badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--crafto-primary);
+  display: inline-block;
+}
+
+.crafto-badge-dark {
+  background-color: rgba(49, 62, 59, 0.08);
+  color: var(--crafto-secondary);
+  border-color: rgba(49, 62, 59, 0.15);
+}
+
+.crafto-badge-dark .crafto-badge-dot {
+  background-color: var(--crafto-secondary);
+}
+
+/* Section Headers */
+.crafto-sec-header {
+  margin-bottom: 48px;
+}
+
+.crafto-sec-title {
+  font-size: 38px;
+  color: var(--crafto-secondary);
+  margin-bottom: 12px;
+}
+
+.crafto-sec-title span {
+  color: var(--crafto-primary);
+  text-shadow: 0 1px 2px rgba(49, 62, 59, 0.1);
+}
+
+.crafto-sec-desc {
+  font-size: 16px;
+  color: var(--crafto-text);
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+/* Crafto Buttons */
+.crafto-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 26px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: var(--crafto-transition);
+  user-select: none;
+}
+
+.crafto-btn-primary {
+  background-color: var(--crafto-primary);
+  color: var(--crafto-secondary);
+  border: 1px solid var(--crafto-primary);
+}
+
+.crafto-btn-primary:hover {
+  background-color: var(--crafto-primary-hover);
+  border-color: var(--crafto-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(213, 213, 43, 0.35);
+}
+
+.crafto-btn-outline {
+  background-color: transparent;
+  color: #FFFFFF;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+}
+
+.crafto-btn-outline:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+.crafto-btn-outline-white {
+  background-color: transparent;
+  color: #FFFFFF;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+}
+
+.crafto-btn-outline-white:hover {
+  background-color: #FFFFFF;
+  color: var(--crafto-secondary);
+}
+
+.crafto-btn-icon {
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.crafto-btn:hover .crafto-btn-icon {
+  transform: translateX(3px);
+}
+
+/* ==========================================================================
+   SECTION 1 — HEADER & NAVIGATION
+   ========================================================================== */
+.crafto-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: var(--crafto-transition);
+}
+
+.crafto-header.scrolled {
+  background-color: var(--crafto-secondary);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.crafto-topbar {
+  background-color: var(--crafto-dark);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 12px;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.crafto-topbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.crafto-topbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.crafto-topbar-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.crafto-topbar-item strong {
+  color: var(--crafto-primary);
+}
+
+.crafto-topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.crafto-topbar-divider {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.crafto-topbar-link {
+  color: rgba(255, 255, 255, 0.85);
+  transition: color 0.2s;
+}
+
+.crafto-topbar-link:hover {
+  color: var(--crafto-primary);
+}
+
+.crafto-topbar-link.highlight {
+  color: var(--crafto-primary);
+  font-weight: 600;
+}
+
+.crafto-topbar-link.register-pill {
+  background-color: rgba(213, 213, 43, 0.15);
+  color: var(--crafto-primary);
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+/* Nav Wrap */
+.crafto-nav-wrap {
+  padding: 14px 0;
+  background-color: rgba(49, 62, 59, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.crafto-nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* EduSpark Brand Logo */
+.crafto-brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.crafto-brand-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #D5D52B 0%, #a8a816 100%);
+  color: var(--crafto-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(213, 213, 43, 0.3);
+}
+
+.crafto-brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.crafto-brand-title {
+  font-family: var(--crafto-font-heading);
+  font-size: 20px;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+.crafto-brand-title strong {
+  color: var(--crafto-primary);
+}
+
+.crafto-brand-title.light {
+  color: #FFFFFF;
+}
+
+.crafto-brand-subtitle {
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* Desktop Menu Links */
+.crafto-nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.crafto-nav-link {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 2px;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.crafto-nav-link:hover {
+  color: var(--crafto-primary);
+}
+
+.crafto-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.crafto-login-ghost-btn {
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 14px;
+}
+
+.crafto-login-ghost-btn:hover {
+  color: var(--crafto-primary);
+}
+
+.crafto-nav-cta {
+  padding: 9px 20px;
+  font-size: 13px;
+}
+
+.crafto-mobile-toggle {
+  display: none;
+  color: #FFFFFF;
+  padding: 6px;
+}
+
+/* Mobile Drawer */
+.crafto-mobile-drawer {
+  background-color: var(--crafto-secondary-dark);
+  border-bottom: 2px solid var(--crafto-primary);
+  padding: 20px;
+}
+
+.crafto-mobile-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.crafto-mobile-link {
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.crafto-mobile-link:hover {
+  color: var(--crafto-primary);
+}
+
+.crafto-mobile-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.crafto-mobile-btn {
+  display: block;
+  text-align: center;
+  padding: 12px 18px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.crafto-mobile-btn.primary {
+  background-color: var(--crafto-primary);
+  color: var(--crafto-secondary);
+}
+
+.crafto-mobile-btn.secondary {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+}
+
+.crafto-mobile-btn.lab-btn {
+  background-color: rgba(213, 213, 43, 0.15);
+  color: var(--crafto-primary);
+  border: 1px solid var(--crafto-primary);
+}
+
+/* ==========================================================================
+   SECTION 2 — HERO
+   ========================================================================== */
+.crafto-hero {
+  position: relative;
+  background-color: var(--crafto-secondary);
+  color: #FFFFFF;
+  padding: 160px 0 100px;
+  overflow: hidden;
+}
+
+.crafto-hero-decor {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.35;
+  z-index: 1;
+}
+
+.crafto-decor-1 {
+  top: 10%;
+  left: 2%;
+  max-width: 180px;
+}
+
+.crafto-decor-2 {
+  bottom: 5%;
+  right: 5%;
+  max-width: 220px;
+}
+
+.crafto-hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.crafto-hero-content {
+  max-width: 620px;
+}
+
+.crafto-hero-content .crafto-badge {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.crafto-root .crafto-hero-title,
+.crafto-hero-title {
+  font-size: 52px;
+  font-weight: 700;
+  color: #FFFFFF !important;
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.crafto-root .crafto-hero-title span,
+.crafto-hero-title span {
+  color: var(--crafto-primary) !important;
+}
+
+.crafto-hero-subtitle {
+  font-size: 17px;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.crafto-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+
+.crafto-hero-lab-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(213, 213, 43, 0.15);
+  color: var(--crafto-primary);
+  border: 1px solid rgba(213, 213, 43, 0.4);
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: var(--crafto-transition);
+}
+
+.crafto-hero-lab-pill:hover {
+  background: rgba(213, 213, 43, 0.25);
+  transform: translateY(-2px);
+}
+
+.crafto-hero-highlights {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.crafto-highlight-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Hero Right Visual & Floating Badges */
+.crafto-hero-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.crafto-hero-img-wrap {
+  position: relative;
+  max-width: 480px;
+  width: 100%;
+}
+
+.crafto-hero-main-img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  display: block;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.crafto-floating-stem-badge {
+  position: absolute;
+  background: #FFFFFF;
+  border-radius: 12px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  z-index: 3;
+  transition: transform 0.3s ease;
+  animation: floatUpDown 4s ease-in-out infinite alternate;
+}
+
+.crafto-floating-stem-badge:hover {
+  transform: translateY(-5px);
+}
+
+.stem-badge-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stem-badge-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.stem-badge-text strong {
+  font-size: 13px;
+  color: var(--crafto-secondary);
+  line-height: 1.2;
+}
+
+.stem-badge-text span {
+  font-size: 11px;
+  color: #71807D;
+}
+
+.badge-chemistry {
+  top: 8%;
+  left: -20px;
+  animation-delay: 0s;
+}
+
+.badge-physics {
+  top: 36%;
+  right: -25px;
+  animation-delay: 1s;
+}
+
+.badge-biology {
+  bottom: 22%;
+  left: -25px;
+  animation-delay: 2s;
+}
+
+.badge-math {
+  bottom: 4%;
+  right: -15px;
+  animation-delay: 3s;
+}
+
+@keyframes floatUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-8px);
+  }
+}
+
+/* ==========================================================================
+   SECTION 3 — ABOUT EDUSPARK
+   ========================================================================== */
+.crafto-about-sec {
+  padding: 100px 0;
+  background-color: #FFFFFF;
+}
+
+.crafto-about-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+  gap: 60px;
+}
+
+.crafto-about-img-wrap {
+  position: relative;
+}
+
+.crafto-about-img {
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+  display: block;
+}
+
+.crafto-about-callout-card {
+  position: absolute;
+  bottom: -20px;
+  right: 20px;
+  background: var(--crafto-secondary);
+  color: #FFFFFF;
+  padding: 18px 24px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 12px 28px rgba(49, 62, 59, 0.25);
+  max-width: 280px;
+}
+
+.crafto-about-callout-number {
+  font-family: var(--crafto-font-heading);
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--crafto-primary);
+  line-height: 1;
+}
+
+.crafto-about-callout-label {
+  font-size: 13px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.crafto-about-text-wrap {
+  max-width: 580px;
+}
+
+.crafto-sec-lead {
+  font-size: 18px;
+  color: var(--crafto-text-dark);
+  font-weight: 500;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.crafto-sec-body {
+  font-size: 15px;
+  color: var(--crafto-text);
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.crafto-about-pillars {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.crafto-pillar-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.crafto-pillar-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: var(--crafto-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.crafto-pillar-item h4 {
+  font-size: 16px;
+  color: var(--crafto-secondary);
+  margin-bottom: 4px;
+}
+
+.crafto-pillar-item p {
+  font-size: 14px;
+  color: var(--crafto-text);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   SECTION 4 — LEARNING FEATURES
+   ========================================================================== */
+.crafto-features-sec {
+  padding: 100px 0;
+  background-color: var(--crafto-light-bg);
+}
+
+.crafto-features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.crafto-feature-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--crafto-border);
+  border-radius: 12px;
+  padding: 32px 28px;
+  transition: var(--crafto-transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.crafto-feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(49, 62, 59, 0.08);
+  border-color: var(--crafto-primary);
+}
+
+.crafto-feature-icon-wrap {
+  width: 54px;
+  height: 54px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.crafto-feature-card h3 {
+  font-size: 19px;
+  color: var(--crafto-secondary);
+  margin-bottom: 12px;
+}
+
+.crafto-feature-card p {
+  font-size: 14px;
+  color: var(--crafto-text);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   SECTION 5 — SUBJECTS
+   ========================================================================== */
+.crafto-subjects-sec {
+  padding: 100px 0;
+  background-color: #FFFFFF;
+}
+
+.crafto-subjects-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.crafto-subject-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--crafto-border);
+  border-radius: 14px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  transition: var(--crafto-transition);
+  position: relative;
+}
+
+.crafto-subject-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 36px rgba(49, 62, 59, 0.09);
+}
+
+.crafto-subject-card.card-math:hover { border-color: #2D7FF9; }
+.crafto-subject-card.card-physics:hover { border-color: #EF991F; }
+.crafto-subject-card.card-chemistry:hover { border-color: #6655D9; }
+.crafto-subject-card.card-biology:hover { border-color: #28B67A; }
+
+.crafto-subject-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.crafto-subject-icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.crafto-subject-grade-pill {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 10px;
+  background-color: var(--crafto-light-bg);
+  color: var(--crafto-secondary);
+}
+
+.crafto-subject-name {
+  font-size: 21px;
+  color: var(--crafto-secondary);
+  margin-bottom: 10px;
+}
+
+.crafto-subject-desc {
+  font-size: 13.5px;
+  color: var(--crafto-text);
+  line-height: 1.6;
+  margin-bottom: 18px;
+  flex-grow: 1;
+}
+
+.crafto-subject-topic-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.crafto-subject-topic-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  color: var(--crafto-text-dark);
+}
+
+.crafto-subject-footer {
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid var(--crafto-border);
+}
+
+.crafto-subject-explore-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  color: var(--crafto-secondary);
+  font-size: 13px;
+  font-weight: 700;
+  padding: 6px 0;
+  transition: color 0.2s ease;
+}
+
+.crafto-subject-explore-btn:hover {
+  color: #000000;
+}
+
+.crafto-subject-explore-btn:hover svg {
+  transform: translateX(4px);
+}
+
+.crafto-subject-explore-btn svg {
+  transition: transform 0.2s ease;
+}
+
+.crafto-subjects-cta-bar {
+  background-color: var(--crafto-light-bg);
+  border: 1px solid var(--crafto-border);
+  border-radius: 12px;
+  padding: 20px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.crafto-subjects-cta-bar p {
+  margin: 0;
+  font-size: 15px;
+  color: var(--crafto-secondary);
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   SECTION 6 — HOW EDUSPARK WORKS
+   ========================================================================== */
+.crafto-how-it-works-sec {
+  padding: 100px 0;
+  background-color: var(--crafto-light-bg);
+}
+
+.crafto-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 18px;
+}
+
+.crafto-step-card {
+  background: #FFFFFF;
+  border: 1px solid var(--crafto-border);
+  border-radius: 12px;
+  padding: 24px 18px;
+  text-align: center;
+  position: relative;
+  transition: var(--crafto-transition);
+}
+
+.crafto-step-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--crafto-primary);
+  box-shadow: 0 12px 24px rgba(49, 62, 59, 0.07);
+}
+
+.crafto-step-number {
+  font-family: var(--crafto-font-heading);
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--crafto-primary);
+  margin-bottom: 12px;
+  line-height: 1;
+}
+
+.crafto-step-card h4 {
+  font-size: 15px;
+  color: var(--crafto-secondary);
+  margin-bottom: 8px;
+}
+
+.crafto-step-card p {
+  font-size: 12.5px;
+  color: var(--crafto-text);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   SECTION 7 — VIRTUAL LAB SHOWCASE
+   ========================================================================== */
+.crafto-lab-showcase-sec {
+  padding: 100px 0;
+  background-color: #FFFFFF;
+}
+
+.crafto-lab-showcase-card {
+  background: var(--crafto-secondary);
+  border-radius: 20px;
+  padding: 60px;
+  color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 24px 48px rgba(49, 62, 59, 0.2);
+}
+
+.crafto-lab-showcase-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 50px;
+}
+
+.crafto-lab-showcase-content .crafto-badge {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.crafto-root .crafto-lab-showcase-content h2,
+.crafto-lab-showcase-content h2 {
+  font-size: 34px;
+  color: #FFFFFF !important;
+  margin-bottom: 16px;
+}
+
+.crafto-lab-lead {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 24px;
+}
+
+.crafto-lab-workflow-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.crafto-workflow-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.step-bullet {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--crafto-primary);
+  color: var(--crafto-secondary);
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.crafto-workflow-step strong {
+  display: block;
+  font-size: 14px;
+  color: #FFFFFF;
+}
+
+.crafto-workflow-step span {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.crafto-lab-actions {
+  margin-bottom: 16px;
+}
+
+.crafto-lab-disclaimer {
+  display: block;
+  font-size: 11.5px;
+  color: rgba(255, 255, 255, 0.6);
+  font-style: italic;
+}
+
+.crafto-lab-mockup-frame {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.crafto-lab-preview-img {
+  width: 100%;
+  display: block;
+}
+
+.crafto-lab-live-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(21, 27, 26, 0.85);
+  backdrop-filter: blur(6px);
+  color: var(--crafto-primary);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #22C55E;
+  display: inline-block;
+  animation: livePulse 1.5s infinite;
+}
+
+@keyframes livePulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+/* ==========================================================================
+   SECTION 8 — LEARNING ACCESSIBILITY & OFFLINE
+   ========================================================================== */
+.crafto-accessibility-sec {
+  padding: 100px 0;
+  background-color: var(--crafto-light-bg);
+}
+
+.crafto-access-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.crafto-access-card {
+  background: #FFFFFF;
+  border: 1px solid var(--crafto-border);
+  border-radius: 12px;
+  padding: 28px 24px;
+  transition: var(--crafto-transition);
+}
+
+.crafto-access-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--crafto-primary);
+  box-shadow: 0 12px 24px rgba(49, 62, 59, 0.06);
+}
+
+.crafto-access-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: var(--crafto-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.crafto-access-card h4 {
+  font-size: 17px;
+  color: var(--crafto-secondary);
+  margin-bottom: 10px;
+}
+
+.crafto-access-card p {
+  font-size: 13.5px;
+  color: var(--crafto-text);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.crafto-access-transparency-box {
+  background: rgba(213, 213, 43, 0.12);
+  border: 1px solid rgba(213, 213, 43, 0.35);
+  border-radius: 10px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13.5px;
+  color: #313E3B;
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   SECTION 9 — FINAL CTA
+   ========================================================================== */
+.crafto-final-cta-sec {
+  padding: 80px 0;
+  background-color: #FFFFFF;
+}
+
+.crafto-final-cta-inner {
+  background: linear-gradient(135deg, #1E2624 0%, #313E3B 100%);
+  border-radius: 20px;
+  padding: 60px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  color: #FFFFFF;
+  box-shadow: 0 20px 40px rgba(49, 62, 59, 0.15);
+}
+
+.crafto-final-cta-content {
+  max-width: 600px;
+}
+
+.crafto-final-cta-content .crafto-badge {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.crafto-root .crafto-final-cta-content h2,
+.crafto-final-cta-content h2 {
+  font-size: 36px;
+  color: #FFFFFF !important;
+  margin-bottom: 12px;
+}
+
+.crafto-final-cta-content p {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+}
+
+.crafto-final-cta-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   SECTION 10 — FOOTER
+   ========================================================================== */
+.crafto-footer {
+  background-color: var(--crafto-dark);
+  color: rgba(255, 255, 255, 0.7);
+  padding: 80px 0 30px;
+}
+
+.crafto-footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 0.9fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.crafto-footer-col h4 {
+  font-size: 16px;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.crafto-footer-desc {
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.6;
+  margin: 16px 0 20px 0;
+}
+
+.crafto-footer-badges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.footer-mini-badge {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--crafto-primary);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.crafto-footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.crafto-footer-link {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 13.5px;
+  transition: color 0.2s;
+}
+
+.crafto-footer-link:hover {
+  color: var(--crafto-primary);
+}
+
+.crafto-footer-link.highlight {
+  color: var(--crafto-primary);
+  font-weight: 600;
+}
+
+.crafto-footer-btn-link {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 13.5px;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+  transition: color 0.2s;
+}
+
+.crafto-footer-btn-link:hover {
+  color: var(--crafto-primary);
+}
+
+.crafto-footer-lang-wrap {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.lang-prompt {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.crafto-footer-bottom {
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.5);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.crafto-footer-bottom p {
+  margin: 0;
+}
+
+.crafto-scroll-top-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--crafto-primary);
+  color: var(--crafto-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  z-index: 999;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.crafto-scroll-top-btn:hover {
+  transform: translateY(-4px);
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+@media (max-width: 1200px) {
+  .crafto-hero-title {
+    font-size: 44px;
+  }
+  .crafto-subjects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .crafto-steps-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .crafto-topbar {
+    display: none !important;
+  }
+  .crafto-nav-menu {
+    display: none;
+  }
+  .crafto-mobile-toggle {
+    display: block;
+  }
+  .crafto-hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .crafto-hero-content {
+    max-width: 100%;
+  }
+  .crafto-hero-actions {
+    justify-content: center;
+  }
+  .crafto-hero-highlights {
+    justify-content: center;
+  }
+  .crafto-floating-stem-badge {
+    position: static !important;
+    margin: 8px auto !important;
+    animation: none !important;
+    left: auto !important;
+    right: auto !important;
+  }
+  .crafto-about-grid {
+    grid-template-columns: 1fr;
+  }
+  .crafto-about-text-wrap {
+    max-width: 100%;
+  }
+  .crafto-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .crafto-lab-showcase-grid {
+    grid-template-columns: 1fr;
+  }
+  .crafto-lab-showcase-card {
+    padding: 36px 24px;
+  }
+  .crafto-access-grid {
+    grid-template-columns: 1fr;
+  }
+  .crafto-final-cta-inner {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 24px;
+  }
+  .crafto-footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .crafto-nav-actions .crafto-login-ghost-btn,
+  .crafto-nav-actions .crafto-nav-cta {
+    display: none !important;
+  }
+  .crafto-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .crafto-hero {
+    padding: 110px 0 50px;
+  }
+  .crafto-hero-title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .crafto-topbar {
+    display: none !important;
+  }
+  .crafto-hero {
+    padding: 100px 0 50px;
+  }
+  .crafto-hero-title {
+    font-size: 28px;
+  }
+  .crafto-features-grid {
+    grid-template-columns: 1fr;
+  }
+  .crafto-subjects-grid {
+    grid-template-columns: 1fr;
+  }
+  .crafto-steps-grid {
+    grid-template-columns: 1fr;
+  }
+  .crafto-subjects-cta-bar {
+    flex-direction: column;
+    text-align: center;
+  }
+  .crafto-footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .crafto-final-cta-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .crafto-final-cta-actions .crafto-btn {
+    width: 100%;
+  }
+}
+
+/* Vestibular Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .crafto-floating-stem-badge {
+    animation: none !important;
+  }
+  .crafto-btn,
+  .crafto-feature-card,
+  .crafto-subject-card,
+  .crafto-step-card {
+    transition: none !important;
+    transform: none !important;
+  }
+}

@@ -1,0 +1,143 @@
+/* =============================================================================
+   EDUSPARK CONNECTION BANNER STYLES
+   Accessible alerts for online, offline, and syncing states
+   ============================================================================= */
+
+.eduspark-connection-banner {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  padding: 10px 16px;
+  font-size: 13px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+}
+
+.eduspark-connection-banner.offline {
+  background-color: #FEF3C7;
+  color: #92400E;
+  border-bottom: 2px solid #F59E0B;
+}
+
+.eduspark-connection-banner.synced {
+  background-color: #D1FAE5;
+  color: #065F46;
+  border-bottom: 2px solid #10B981;
+}
+
+.eduspark-connection-banner.syncing {
+  background-color: #E0E7FF;
+  color: #3730A3;
+  border-bottom: 2px solid #6366F1;
+}
+
+.conn-banner-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.conn-banner-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.conn-icon {
+  flex-shrink: 0;
+}
+
+.conn-icon.offline {
+  color: #D97706;
+}
+
+.conn-icon.synced {
+  color: #059669;
+}
+
+.conn-icon.spin {
+  animation: conn-spin 1.2s linear infinite;
+}
+
+@keyframes conn-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.conn-banner-text {
+  line-height: 1.4;
+}
+
+.conn-banner-text strong {
+  font-weight: 600;
+}
+
+.conn-queue-pill {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 8px;
+  background-color: rgba(245, 158, 11, 0.2);
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #78350F;
+}
+
+.conn-banner-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.conn-sync-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background-color: #3730A3;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.conn-sync-btn:hover {
+  opacity: 0.9;
+}
+
+.conn-close-btn {
+  background: none;
+  border: none;
+  color: currentColor;
+  opacity: 0.6;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.conn-close-btn:hover {
+  opacity: 1;
+}
+
+.conn-close-btn:focus-visible,
+.conn-sync-btn:focus-visible {
+  outline: 2px solid #313E3B;
+  outline-offset: 1px;
+}
